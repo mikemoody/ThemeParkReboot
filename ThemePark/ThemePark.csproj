@@ -86,6 +86,7 @@
     <Content Include="App_Themes\TestTheme\StyleSheet.css" />
     <Content Include="Contact.aspx" />
     <Content Include="ContactIndia.aspx" />
+    <Content Include="Database Administration.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -107,6 +108,7 @@
     <Content Include="Images\rollercoaster2.jpeg" />
     <Content Include="Images\theme_park.png" />
     <Content Include="Mobile2.aspx" />
+    <Content Include="ParksDatabaseAdmin.aspx" />
     <Content Include="RideInfo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebService1.asmx" />
@@ -124,6 +126,20 @@
     <Compile Include="admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database Administration.ascx.cs">
+      <DependentUpon>Database Administration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database Administration.ascx.designer.cs">
+      <DependentUpon>Database Administration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ParksDatabaseAdmin.aspx.cs">
+      <DependentUpon>ParksDatabaseAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParksDatabaseAdmin.aspx.designer.cs">
+      <DependentUpon>ParksDatabaseAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="RideInfo.aspx.cs">
       <DependentUpon>RideInfo.aspx</DependentUpon>
