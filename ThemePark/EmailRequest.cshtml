@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request for Assistance</title>
+</head>
+<body>
+  <h2>Submit Email Request for Assistance</h2>
+  <form method="post" action="ProcessRequest.cshtml">
+    <div>
+        Please provide your name:
+        <input type="text" name="customerName" />
+    </div>
+
+    <div>
+        Your email address:
+        <input type="text" name="customerEmail" />
+    </div>
+
+    <div>
+        Please describe how we can help you: <br />
+        <textarea name="customerRequest" cols="45" rows="4"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+  </form>
+</body>
+</html>

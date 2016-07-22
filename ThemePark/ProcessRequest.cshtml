@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+@{
+    var customerName = Request["customerName"];
+    var customerEmail = Request["customerEmail"]; 
+    var customerRequest = Request["customerRequest"];
+    var errorMessage = "";
+    var debuggingFlag = false;
+    try {
+        // Initialize WebMail helper
+        WebMail.SmtpServer = "smtp.mail.yahoo.com";
+        WebMail.SmtpPort = 587;
+        WebMail.UserName = "themeparkreview";
+        WebMail.Password = "rollercoaster";
+        WebMail.From = "themeparkreview@yahoo.com";
+
+        // Send email
+        WebMail.Send(to: customerEmail,
+            subject: "Help request from - " + customerName,
+            body: customerRequest
+        );
+    }
+    catch (Exception ex ) {
+        errorMessage = ex.Message;
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request for Assistance</title>
+</head>
+<body>
+  <p>Your friends at the Theme park site would like to help you, <b>@customerName</b>.</p>
+    @if(errorMessage == ""){
+      <p>An email message has been sent to our amazing Theme Park Customer Service
+         department regarding the following problem:</p>
+      <p><b>@customerRequest</b></p>
+    }
+    else{
+        <p><b>The email was <em>not</em> sent.</b></p>
+        <p>Please check that the code in the ProcessRequest page has 
+           correct settings for the SMTP server name, a user name, 
+           a password, and a "from" address.
+        </p>
+        if(debuggingFlag){
+            <p>The following error was reported:</p>
+            <p><em>@errorMessage</em></p>
+        }
+    }
+</body>
+</html>
