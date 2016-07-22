@@ -55,8 +55,15 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ThemePark">
+      <HintPath>..\..\..\..\..\..\..\..\Desktop\New folder\ThemePark\bin\ThemePark.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\review.mdf" />
+    <Content Include="App_Data\review_log.ldf">
+      <DependentUpon>review.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="ContactIndia.aspx" />
     <Content Include="Default.aspx" />
@@ -81,6 +88,7 @@
     <Content Include="Images\theme_park.png" />
     <Content Include="Mobile2.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contact.aspx.cs">
@@ -112,33 +120,50 @@
       <DependentUpon>Mobile2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="App_Themes\Skin1\Skin1.skin" />
     <Content Include="EmailRequest.cshtml" />
     <Content Include="ProcessRequest.cshtml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="exclude\" />
+    <Folder Include="Web References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -153,9 +178,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>49752</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49486/</IISUrl>
+          <IISUrl>http://localhost:65384/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
