@@ -1,0 +1,150 @@
+﻿body {
+}
+
+.LogInControlPanel
+{
+    background-color:silver;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.LogInTable
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.LogInPanelText
+{
+    /**/
+}
+
+.LogInPanelLinkText
+{
+    /**/
+}
+
+.LogInButton
+{
+    margin-left:60px;
+}
+
+.LogInErrorText
+{
+    color:red;
+}
+
+/*******************************************************/
+
+.NewUserControlPanel
+{
+    background-color:silver;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.NewUserTable
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.NewUserPanelText
+{
+    /**/
+}
+
+.NewUserPanelLinkText
+{
+    /**/
+}
+
+.NewUserButton
+{
+    margin-left:28px;
+}
+
+.NewUserErrorText
+{
+    color:red;
+}
+
+/********************************************************/
+
+.AccountAdminControlPanel
+{
+    background-color:silver;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.AccountAdminErrorPanel
+{
+    background-color:silver;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.AccountAdminTable
+{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.AccountAdminGridView
+{
+    width:100%;
+    height:250px;
+}
+
+.AccountAdminGridViewRow
+{
+    background-color:white;
+}
+
+
+.AccountAdminGridViewAltRow
+{
+    background-color:whitesmoke;
+}
+
+.AccountAdminGridViewSelectedRow
+{
+    background-color:skyblue;
+}
+
+.AccountAdminGridViewHeader
+{
+    background-color:whitesmoke;
+}
+
+.AccountAdminGridViewTextPanel
+{
+    text-align:center;
+}
+
+.AccountAdminGridViewText
+{
+    /**/
+}
+
+.AccountAdminPanelText
+{
+    /**/
+}
+
+.AccountAdminLinkText
+{
+    /**/
+}
+
+.AccountAdminButtons
+{
+    width:100%;
+}
+
+.AccountAdminErrorText
+{
+    /**/
+}

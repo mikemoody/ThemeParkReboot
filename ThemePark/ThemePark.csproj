@@ -39,6 +39,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -60,10 +76,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AccountAdmin.aspx" />
+    <Content Include="admin\AccountAdminUC.ascx" />
+    <Content Include="admin\Default.aspx" />
     <Content Include="App_Data\review.mdf" />
     <Content Include="App_Data\review_log.ldf">
       <DependentUpon>review.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Themes\TestTheme\StyleSheet.css" />
     <Content Include="Contact.aspx" />
     <Content Include="ContactIndia.aspx" />
     <Content Include="Default.aspx" />
@@ -91,6 +111,65 @@
     <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AccountAdmin.aspx.cs">
+      <DependentUpon>AccountAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AccountAdminUC.ascx.cs">
+      <DependentUpon>AccountAdminUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\ReviewWCFDataService.cs" />
+    <Content Include="App_Code\ReviewModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReviewModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="App_Code\ReviewModel.cs" />
+    <Content Include="App_Code\ReviewModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReviewModel.Context.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Applications.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Membership.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Paths.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Profile.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Roles.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_SchemaVersions.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_Users.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\aspnet_WebEvent_Events.cs">
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\ReviewModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReviewModel.tt</DependentUpon>
+    </Content>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +228,20 @@
     <Content Include="Site.Master" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="packages.config" />
+    <Content Include="admin\web.config" />
+    <EntityDeploy Include="App_Code\ReviewModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ReviewModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Code\ReviewModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ReviewModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Code\ReviewModel.edmx.diagram" />
+    <Content Include="App_Code\ReviewModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ReviewModel1.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -161,9 +254,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="exclude\" />
     <Folder Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
