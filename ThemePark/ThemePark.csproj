@@ -107,8 +107,10 @@
     <Content Include="Images\rollercoaster2.jpeg" />
     <Content Include="Images\theme_park.png" />
     <Content Include="Mobile2.aspx" />
+    <Content Include="RideInfo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebService1.asmx" />
+    <Content Include="WebUserControl1.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\AccountAdmin.aspx.cs">
@@ -122,6 +124,20 @@
     <Compile Include="admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RideInfo.aspx.cs">
+      <DependentUpon>RideInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RideInfo.aspx.designer.cs">
+      <DependentUpon>RideInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
     <Content Include="App_Code\ReviewWCFDataService.cs" />
     <Content Include="App_Code\ReviewModel.Designer.cs">
